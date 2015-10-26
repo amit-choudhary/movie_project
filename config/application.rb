@@ -24,3 +24,5 @@ module MovieProject
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+CLIENT_API_TOKEN = YAML.load_file("config/secrets.yml")[Rails.env]["client_api_token"]

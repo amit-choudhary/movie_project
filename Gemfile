@@ -5,14 +5,17 @@ gem 'rails', '4.2.4'
 gem 'mysql2', '0.3.20'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
+gem 'apipie-rails', '~> 0.3.4'
 
 gem 'jquery-rails', '~> 4.0.5'
 
 group :development, :test do
-  gem 'byebug', '~> 6.0.2'
+  gem 'pry', '~> 0.10.3'
+  gem 'rspec-rails', '3.3.3'
+  gem 'factory_girl', '~> 4.5.0'
+  gem 'shoulda-matchers', '~> 3.0.1'
 end
 
 group :development do
   gem 'spring', '~> 1.4.0'
 end
-
