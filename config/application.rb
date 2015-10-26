@@ -25,4 +25,8 @@ module MovieProject
   end
 end
 
-CLIENT_API_TOKEN = ENV['CLIENT_API_TOKEN']
+if Rails.env == 'production'
+  CLIENT_API_TOKEN = ENV['CLIENT_API_TOKEN']
+else
+  CLIENT_API_TOKEN = YAML.load_file("config/secrets.yml")[Rails.env]["client_api_token"]
+end
