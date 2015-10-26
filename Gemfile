@@ -12,8 +12,9 @@ gem 'jquery-rails', '~> 4.0.5'
 group :development, :test do
   gem 'pry', '~> 0.10.3'
   gem 'rspec-rails', '3.3.3'
-  gem 'factory_girl', '~> 4.5.0'
+  gem 'factory_girl_rails', '~> 4.5.0'
   gem 'shoulda-matchers', '~> 3.0.1'
+  gem 'faker', '~> 1.5.0'
 end
 
 group :development do

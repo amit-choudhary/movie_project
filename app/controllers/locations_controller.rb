@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
 
-  before_action :load_location, only: :movies
   before_action :authorize_api_key!, only: [:movies, :all]
+  before_action :load_location, only: :movies
 
   api :GET, '/locations/:id/movies', 'It returns all movies corresponding to a particular location'
   description <<-EOS
@@ -68,7 +68,7 @@ class LocationsController < ApplicationController
   private
     def load_location
       @location = Location.where(id: params[:id])
-      unless @location
+      unless @location.first
         render json: { message: 'Location not found' }, status: :not_found
       end
     end
